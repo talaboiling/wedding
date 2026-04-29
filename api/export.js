@@ -37,7 +37,7 @@ export default async function handler(request, response) {
 
     // Set headers for file download
     response.setHeader('Content-Type', 'text/csv; charset=utf-8');
-    response.setHeader('Content-Disposition', 'attachment; filename="той-қонақтары.csv"');
+    response.setHeader('Content-Disposition', 'attachment; filename="guests.csv"');
     
     return response.status(200).send(csv);
   } catch (error) {
