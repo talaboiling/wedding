@@ -8,7 +8,7 @@ export default async function handler(request, response) {
 
   try {
     // Get all guests from the Redis list (0 to -1 gets all elements)
-    const guests = await kv.lrange('guests', 0, -1) || [];
+    const guests = await kv.lrange('guests_talgat_laura', 0, -1) || [];
 
     const header = ['Аты-жөні', 'Қатысуы', 'Уақыты'];
     const attendMap = { yes: 'Иә', no: 'Жоқ', maybe: 'Белгісіз', '': '' };

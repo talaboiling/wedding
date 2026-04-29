@@ -19,9 +19,9 @@ export default async function handler(request, response) {
       timestamp: new Date().toLocaleString('kk-KZ', { timeZone: 'Asia/Almaty' })
     };
 
-    // Push the entry to a Redis list named "guests"
+    // Push the entry to a Redis list named "guests_talgat_laura"
     // By using rpush, the newest entries are added to the end
-    await kv.rpush('guests', entry);
+    await kv.rpush('guests_talgat_laura', entry);
 
     return response.status(200).json({ success: true, message: 'Response saved successfully' });
   } catch (error) {
